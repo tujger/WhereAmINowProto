@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_my_track">
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/contentViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/streetViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1">
+            <fragment
+                android:name="com.google.android.gms.maps.SupportStreetViewPanoramaFragment"
+                android:id="@+id/streetView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/mapViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cameraBearing="112.5"
+                app:cameraTargetLat="-33.796923"
+                app:cameraTargetLng="150.922433"
+                app:cameraTilt="30"
+                app:cameraZoom="13"
+                app:mapType="normal"
+                app:uiCompass="false"
+                app:uiRotateGestures="true"
+                app:uiScrollGestures="false"
+                app:uiTiltGestures="true"
+                app:uiZoomControls="false"
+                app:uiZoomGestures="true"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@null"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space"
+        android:visibility="invisible"
+        android:height="8sp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:minHeight="20sp"
+        android:minWidth="20sp"
+        style="@style/MenuLabelsStyle"
+        android:layout_below="@+id/space"
+        android:id="@+id/stickyInfoLayout"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/stickyInfo"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/placeholderLayout"
+        android:visibility="visible"
+        android:background="#88888888">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="#aaaaaaaa"
+        android:text="Start tracking and send link"
+        android:id="@+id/button_start_tracking_and_send_link"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

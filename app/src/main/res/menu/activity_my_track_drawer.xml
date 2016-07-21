@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/nav_general"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_type"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Map Type" />
+        <item
+            android:id="@+id/nav_start_and_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Start and Share" />
+        <item
+            android:id="@+id/nav_follow_me"
+            android:icon="@drawable/ic_navigation_black_24dp"
+            android:title="Follow Me" />
+    </group>
+    <group
+        android:id="@+id/nav_other"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_setting_light"
+            android:title="Settings" />
+    </group>
+</menu>

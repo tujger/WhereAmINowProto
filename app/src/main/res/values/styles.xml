@@ -1,0 +1,40 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:radius">20sp</item>
+    </style>
+
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_showAnimation">@anim/jump_from_down</item>
+        <item name="fab_hideAnimation">@anim/jump_to_down</item>
+        <item name="fab_shadowColor">#888</item>
+        <item name="fab_colorNormal">@color/blue</item>
+        <item name="fab_colorPressed">@color/blue</item>
+        <item name="fab_colorRipple">@color/colorPrimary</item>
+    </style>
+
+</resources>

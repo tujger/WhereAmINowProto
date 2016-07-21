@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/fab_start_and_send"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Start tracking and send the link" />
+    <item
+        android:id="@+id/fab_stop_tracking"
+        android:icon="@drawable/ic_stop_black_24dp"
+        android:title="Stop tracking" />
+    <item
+        android:id="@+id/fab_cancel_tracking"
+        android:icon="@drawable/ic_cancel_black_24dp"
+        android:title="Cancel tracking" />
+    <item
+        android:id="@+id/fab_split_screen"
+        android:icon="@drawable/ic_view_agenda_black_24dp"
+        android:title="Split screen"/>
+    <item
+        android:id="@+id/fab_switch_to_friend"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="Switch to friend" />
+</menu>

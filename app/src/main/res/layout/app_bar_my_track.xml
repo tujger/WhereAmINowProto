@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_my_track" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/fab_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:layout_behavior="ru.wtg.whereaminow.helpers.LinearLayoutCompatBehavior">
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab_friend"
+                app:menu_icon="@drawable/ic_person_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                app:menu_labels_style="@style/MenuLabelsStyle"
+                app:menu_labels_showAnimation="@anim/jump_from_down"
+                app:menu_labels_hideAnimation="@anim/jump_to_down"
+                app:menu_animationDelayPerItem="1"
+                app:menu_shadowColor="#888"
+                app:menu_colorNormal="@android:color/holo_green_light"
+                app:menu_colorPressed="@android:color/holo_green_light"
+                app:menu_colorRipple="@color/colorPrimary">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_switch_to_friend"
+                    android:src="@drawable/ic_people_white_24dp"
+                    app:fab_label="Switch to friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_switch_to_me"
+                    android:src="@drawable/ic_person_white_24dp"
+                    app:fab_label="Switch to me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_split_street_view_friend"
+                    android:src="@drawable/ic_view_agenda_white_24dp"
+                    app:fab_label="Split screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_navigate"
+                    android:src="@drawable/ic_navigation_white_24dp"
+                    app:fab_label="Navigate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_show_us"
+                    android:src="@drawable/ic_fullscreen_white_24dp"
+                    app:fab_label="Show us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_street_view"
+                    android:src="@drawable/ic_streetview_white_24dp"
+                    app:fab_label="Street view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_send_message"
+                    android:src="@drawable/ic_chat_white_24dp"
+                    app:fab_label="Send message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                app:menu_labels_style="@style/MenuLabelsStyle"
+                app:menu_labels_showAnimation="@anim/jump_from_down"
+                app:menu_labels_hideAnimation="@anim/jump_to_down"
+                app:menu_animationDelayPerItem="0"
+                android:layout_gravity="bottom|end"
+                app:menu_shadowColor="#888"
+                app:menu_colorNormal="@color/colorAccent"
+                app:menu_colorPressed="@color/colorAccent"
+                app:menu_colorRipple="@color/colorPrimary">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_start_and_send"
+                    android:src="@drawable/ic_share_white_24dp"
+                    app:fab_label="Start tracking and send the link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_send_link"
+                    android:src="@drawable/ic_share_white_24dp"
+                    app:fab_label="Resend link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_stop_tracking"
+                    android:src="@drawable/ic_stop_white_24dp"
+                    app:fab_label="Stop tracking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_cancel_tracking"
+                    android:src="@drawable/ic_clear_white_24dp"
+                    app:fab_label="Cancel tracking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_split_screen"
+                    android:src="@drawable/ic_view_agenda_white_24dp"
+                    app:fab_label="Split screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MenuButtonsStyle" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.design.widget.CoordinatorLayout>
